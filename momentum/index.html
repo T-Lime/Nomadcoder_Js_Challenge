@@ -1,35 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Momentum App</title>
+    <title>Maple Story ToDoList</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- 로그인 화면 -->
+     
     <form id="login-form" class="hidden">
-        <input required maxlength="15" type="text" placeholder="What is your name?">
-        <button>Log In</button>
+        <div>
+            <p>Login page</p>
+            <input class="nameuser" required maxlength="15" type="text" placeholder="사용할 이름을 적어주세요">
+            <button>Log In</button><br>
+                <input id="man" type="radio" name="gen"  checked><label for="man">남</label>
+                <input id="women" type="radio" name="gen"><label for="women">여</label>
+        </div>
+        
     </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and press Enter" required/>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id ="quote">
-        <span></span>
-        <span></span>
+    <div id="login-bg">
     </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
+
+
+    <!-- 로그인 이후 화면 -->
+
+    <!-- 캐릭터 화면 -->
+        <div id="login-later" class="hidden">
+        <div id="char-container">
+            <img class="charimg" src="img/man.png" alt="캐릭터 이미지">
+            <h1 id="greeting" class="hidden"></h1>
+            <button id="logout">로그아웃</button>
+        </div>
+        <div class="todo-container">
+            <div class="list-box">
+                <ul id="todo-list"></ul>
+            </div>
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do and press Enter" required/>
+            </form>
+        </div>
+        
+        <div class="data-container">
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="data-clock">
+                <div id="clock">
+                    <h2 id="clock">00:00:00</h2>
+                </div>
+            </div>
+        
+        
+        <div id ="quote">
+            <span></span>
+            <span></span>
+        </div>
     </div>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/chargen.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>
