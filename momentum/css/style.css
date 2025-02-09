@@ -1,5 +1,10 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
 body, html {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -10,8 +15,7 @@ body, html {
 }
 
 /* 로그인 화면 */
-
-#login-form{
+#login-form {
     width: 100%;
     height: 100%;
     background-image: url(../img/maplelogin.jpg);
@@ -19,55 +23,57 @@ body, html {
     text-align: center;
 }
 
-#login-form div{
+#login-form div {
     width: 500px;
     height: 300px;
     background-color: rgba(230, 230, 230, 0.8);
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
-    translate: -50%;
+    transform: translate(-50%, -50%);
     border-radius: 30px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
-#login-form div p{
+
+#login-form div p {
     padding: 50px;
     font-size: 30px;
 }
 
-#login-form div .nameuser, button{
+#login-form div .nameuser, button {
     position: relative;
 }
-#login-form div .nameuser{
-        width: 300px;
-        height: 50px;
-        background-color: rgba(200, 200, 200, 1);
-        color: black;
-        margin: 0 20px;
-        border: 0;
+
+#login-form div .nameuser {
+    width: 300px;
+    height: 50px;
+    background-color: rgba(200, 200, 200, 1);
+    color: black;
+    margin: 0 20px;
+    border: 0;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-#login-form div .nameuser::placeholder{
+#login-form div .nameuser::placeholder {
     color: white;
 }
 
-#login-form div button{
-    width: 80PX;
-    height: 60PX;
+#login-form div button {
+    width: 80px;
+    height: 60px;
     background-color: rgba(100, 100, 100, 1);
     color: white;
     border: 0;
 }
 
 /* 로그인 이후 */
-
-#login-later{
+#login-later {
     width: 100%;
     height: 100%;
 }
 
 /* 캐릭터 화면 */
-#char-container{
+#char-container {
     width: 200px;
     height: 500px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -80,12 +86,12 @@ body, html {
     border: 1px black solid;
 }
 
-#char-container .charimg{
+#char-container .charimg {
     margin-top: 50px;
     width: 130px;
 }
 
-#char-container #logout{
+#char-container #logout {
     margin-top: 30px;
     background-color: gray;
     border: 0;
@@ -95,8 +101,7 @@ body, html {
 }
 
 /* 투두리스트 */
-
-.todo-container{
+.todo-container {
     width: 700px;
     height: 500px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -105,72 +110,72 @@ body, html {
     position: relative;
     border: 1px black solid;
 }
-.todo-container #todo-form{
+
+.todo-container #todo-form {
     width: 600px;
     position: absolute;
     left: 50%;
-    translate: -50%;
+    transform: translateX(-50%);
     bottom: 5%;
 }
 
-.todo-container #todo-form input{
+.todo-container #todo-form input {
     background-color: white;
     width: 100%;
     height: 40px;
-    border: 0;  
+    border: 0;
 }
 
-.todo-container .list-box{
+.todo-container .list-box {
     width: 100%;
     height: 400px;
     max-height: 400px;
-    overflow-y: auto; 
+    overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
-.todo-container .list-box #todo-list{
+.todo-container .list-box #todo-list {
     list-style: none;
 }
 
-
-
-/* 시계 날씨,주소 */
-
+/* 시계, 날씨, 주소 */
 .data-container {
     display: flex;
-    flex-direction: row; 
-    justify-content: flex-start; 
-    align-items: center; 
-    gap: 55px; 
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 55px;
 }
+
 #weather {
     width: 160px;
     height: 60px;
     padding: 20px;
     background-color: white;
-    text-align: center; 
-    margin-left : 30px;
+    text-align: center;
+    margin-left: 30px;
     border: 1px black solid;
 }
+
 .data-clock {
     text-align: center;
-    width: 700px; 
+    width: 700px;
     height: 100px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px black solid;
 }
+
 .data-clock #clock {
     font-size: 40px;
 }
 
 /* 명언 */
-.quote-container{
+.quote-container {
     margin: 10px;
     display: block;
 }
 
-/* 명언 */
 #quote {
     margin-left: 20px;
     width: 1000px;
@@ -182,7 +187,7 @@ body, html {
     border: 1px black solid;
 }
 
-#quote span{
+#quote span {
     display: inline-block;
     margin-top: 20px;
     margin-left: 20px;
@@ -190,5 +195,5 @@ body, html {
 
 .info-container {
     display: flex;
-    gap: 20px; 
+    gap: 20px;
 }
