@@ -15,3 +15,4 @@ loginLaterElement.style.backgroundImage = `url('img/${chosenImage}')`;
 loginLaterElement.style.backgroundSize = 'cover';  
 loginLaterElement.style.backgroundPosition = 'center'; 
 loginLaterElement.style.backgroundRepeat = 'no-repeat'; 
+loginLaterElement.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
